@@ -1,0 +1,25 @@
+﻿body,html{
+    margin: 0;
+    padding: 0;
+}
+
+.navColor{ /* couleur de fond du bandeau en haut */
+    background-color: #6497ba;
+}
+
+.couleurTexteBandeau{
+    color: white;
+}
+
+.page{
+    height: auto;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5vh;
+}
+
+.image{
+    width: 60vh;
+    height: 60vh;
+}

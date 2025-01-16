@@ -25,10 +25,16 @@
 
 }
 
-.page2{
-    display: none;
+.page2 {
+    display: none; /* Cachée par défaut */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.pageHome{
-    display: flex;
+.pageHome {
+    display: flex; /* Visible par défaut */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

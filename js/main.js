@@ -1,16 +1,22 @@
-﻿const assets = document.querySelector('.assets');
-const pageAssets = document.querySelector('.page2'); // Sélectionne un seul élément avec querySelector
+﻿// Sélection des éléments
+const assets = document.querySelector('.assets');
 const home = document.querySelector('.home');
+const pageAssets = document.querySelector('.page2');
 const pageHome = document.querySelector('.pageHome');
 
-assets.addEventListener('click', () => {
-    pageAssets.style.display = "block";
-    pageHome.style.display = "none";
-    console.log("Page Features");
-});
+// Vérification de l'existence des éléments
+if (assets && home && pageAssets && pageHome) {
+    assets.addEventListener('click', () => {
+        pageAssets.style.display = "flex";
+        pageHome.style.display = "none";
+        console.log("Page Features affichée, Home caché");
+    });
 
-home.addEventListener('click', () => {
-    pageAssets.style.display = "none";
-    pageHome.style.display = "flex";
-    console.log("Home Page");
-});
+    home.addEventListener('click', () => {
+        pageHome.style.display = "flex";
+        pageAssets.style.display = "none";
+        console.log("Page Home affichée, Features cachée");
+    });
+} else {
+    console.error("erreur");
+}

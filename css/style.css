@@ -22,4 +22,13 @@
 .image{
     width: 60vh;
     height: 60vh;
+
+}
+
+.page2{
+    display: none;
+}
+
+.pageHome{
+    display: flex;
 }

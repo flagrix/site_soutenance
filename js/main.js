@@ -20,3 +20,4 @@ if (assets && home && pageAssets && pageHome) {
 } else {
     console.error("erreur");
 }
+

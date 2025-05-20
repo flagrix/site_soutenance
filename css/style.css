@@ -1,29 +1,71 @@
-﻿body,html{
+﻿@font-face {
+    font-family: 'worn';
+    src: url('../fonts/Cardinal.ttf ') ;
+}
+
+body,html{
     margin: 0;
     padding: 0;
     color: white;
-    background-image: url('../image/background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100%;
+
+
 }
 
-p {
-    text-align: center;
-    font-size: 1.5rem;
-    line-height: 1.8;
-    max-width: 600px;
-    background-color: #2a2a3d;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    color : white;
+
+.navColor {
+    background-color: #e8bc4f;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
 }
 
-.navColor{ /* couleur de fond du bandeau en haut */
-    background-color: #6497ba;
+/* Navbar color */
+.navColor {
+    background-color: #e8bc4f; /* couleur de fond de la navbar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre portée sous la navbar */
 }
+
+/* Style du titre Aedon's Stone */
+.navbar-brand {
+    font-size: 2rem; /* Taille du texte plus grande */
+    font-weight: bold; /* Texte en gras pour bien ressortir */
+    color: #a0a0a0; /* Couleur blanche */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ombre portée pour donner un effet lumineux */
+    padding: 15px 20px; /* Espace autour du titre */
+    cursor: pointer; /* Ajout d'un curseur pour indiquer que c'est interactif */
+}
+
+/* Effet au survol du titre sans animation et sans changer d'URL */
+.navbar-brand:hover {
+    color: #e8bc4f; /* Change la couleur du texte au survol pour un contraste */
+    background-color: #fff; /* Change le fond du titre au survol */
+    border-radius: 5px; /* Bordure arrondie */
+}
+
+/* Style des éléments de la navbar (liens de menu) */
+.navbar-nav .nav-item .nav-link {
+    font-size: 1.2rem; /* Taille des liens */
+    color: white; /* Couleur des liens */
+    padding: 10px 15px; /* Espacement autour des éléments */
+}
+
+/* Changement de couleur au survol des éléments de menu */
+.navbar-nav .nav-item .nav-link:hover {
+    color: #e8bc4f; /* Couleur du texte au survol */
+    background-color: rgba(0, 0, 0, 0.2); /* Légère ombre de fond */
+    border-radius: 5px; /* Bordure arrondie */
+}
+
+
+
+
 
 .couleurTexteBandeau{
     color: white;
@@ -46,18 +88,35 @@ p {
 }
 
 .page2 {
+    background-color: #6a0dad;
     display: none; /* Cachée par défaut */
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+
 }
 
+/* Pour la page d'accueil */
 .pageHome {
-    display: flex; /* Visible par défaut */
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    background-color: #6a0dad;
+    background-image: linear-gradient(to right, #000000 0%, rgba(106, 13, 173, 0) 10%, rgba(106, 13, 173, 0) 90%, #000000 100%), url('/image/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: scroll;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
 }
+
+
 
 
 .logo-with-text {
@@ -78,4 +137,56 @@ p {
     font-weight: bold; /* Texte en gras */
 }
 
+.logo_jeu {
+    width: 40px;
+    height: auto;
+    border-radius: 20%;
+}
 
+.backgroud-home{
+    display: flex;
+}
+
+.paper-container {
+    position: relative;
+    width: 80vw; /* largeur adaptative */
+    max-width: 1000px;
+    margin: auto;
+}
+
+.paper-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.paper-content {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 60%;
+    height: 80%;
+
+    overflow-y: auto;
+    font-family: 'worn', serif;
+    font-size: 1.5rem;
+    color: #1e1c1c;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: justify;
+}
+
+
+
+
+/* Si tu veux que le texte soit plus lisible contre l'arrière-plan */
+.paper p {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0;
+}

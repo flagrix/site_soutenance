@@ -1,7 +1,7 @@
 ﻿// Sélection des éléments
 const assets = document.querySelector('.assets');
 const home = document.querySelector('.home');
-const pageAssets = document.querySelector('.page2');
+const pageAssets = document.querySelector('.pagegameplay');
 const pageHome = document.querySelector('.pageHome');
 
 // Vérification de l'existence des éléments

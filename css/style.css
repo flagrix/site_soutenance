@@ -7,8 +7,7 @@ body,html{
     margin: 0;
     padding: 0;
     color: white;
-
-
+    height: 100vh;
 }
 
 
@@ -88,11 +87,21 @@ body,html{
 }
 
 .pagegameplay {
-    background-color: #50164a;
-    display: none; /* Cachée par défaut */
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    background-color: #50164a;
+    background-image: linear-gradient(to right, #000000 0%, rgba(106, 13, 173, 0) 10%, rgba(106, 13, 173, 0) 90%, #000000 100%), url('/image/arriere_plan_test.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: scroll;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
 }
 /* Pour la page d'accueil */
 .pageHome {
@@ -221,4 +230,45 @@ body,html{
     justify-content: center;
 
     text-align: justify;
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    object-fit: cover;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 10;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
 }

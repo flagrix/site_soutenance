@@ -58,24 +58,43 @@
 <!-- création de la page du gameplay -->
 
 <div class="pagegameplay">
-    <div class="container  mt-5 page">
-        <div class="w-50 d-flex align-items-center flex-column">
-            <img src="image/baliste.png" class=" image" alt = "image/404.jpeg">
-            <p class="fs-4">baliste</p>
+    <div class="carousel">
+        <div class="carousel-track">
+            <img src="image/baliste.png" class="carousel-slide" alt="image/404.jpeg">
+            <img src="image/canon.png" class="carousel-slide" alt="image/404.jpeg">
+            <img src="image/tourenfer.png" class="carousel-slide" alt="image/404.jpeg">
         </div>
-        <div class="w-50 d-flex align-items-center flex-column" >
-            <img src="image/canon.png" class=" image" alt = "image/404.jpeg">
-            <p class="fs-4">canon</p>
-        </div>
-        <div class="w-50 d-flex align-items-center flex-column">
-            <img src="image/tour.png" class=" image" alt = "image/404.jpeg">
-            <p class="fs-4">tour d'Aedon</p>
-        </div>
-        <div class="w-50 d-flex align-items-center flex-column">
-            <img src="image/tourenfer.png" class=" image" alt = "image/404.jpeg">
-            <p class="fs-4">Tour de l'enfer</p>
-        </div>
+
+        <button class="carousel-button prev">&#10094;</button>
+        <button class="carousel-button next">&#10095;</button>
     </div>
+
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const slides = Array.from(document.querySelectorAll('.carousel-slide'));
+        const prevButton = document.querySelector('.carousel-button.prev');
+        const nextButton = document.querySelector('.carousel-button.next');
+        let currentIndex = 0;
+
+        function updateCarousel() {
+            const slideWidth = slides[0].clientWidth;
+            track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        }
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateCarousel();
+        });
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateCarousel();
+        });
+
+        // Mise à jour si la fenêtre change de taille
+        window.addEventListener('resize', updateCarousel);
+    </script>
+
 </div>
 
 

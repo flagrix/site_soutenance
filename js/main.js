@@ -21,3 +21,4 @@ if (assets && home && pageAssets && pageHome) {
     console.error("erreur");
 }
 
+

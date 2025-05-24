@@ -20,50 +20,43 @@ body,html{
     z-index: 10;
 }
 
-/* Navbar color */
 .navColor {
-    background-color: #e8bc4f; /* couleur de fond de la navbar */
+    background-color: #e8bc4f;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre portée sous la navbar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Style du titre Aedon's Stone */
+
 .navbar-brand {
-    font-size: 2rem; /* Taille du texte plus grande */
-    font-weight: bold; /* Texte en gras pour bien ressortir */
+    font-size: 2rem;
+    font-weight: bold;
     color: #a0a0a0; /* Couleur blanche */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ombre portée pour donner un effet lumineux */
-    padding: 15px 20px; /* Espace autour du titre */
-    cursor: pointer; /* Ajout d'un curseur pour indiquer que c'est interactif */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 15px 20px;
+    cursor: pointer;
 }
 
-/* Effet au survol du titre sans animation et sans changer d'URL */
 .navbar-brand:hover {
-    color: #e8bc4f; /* Change la couleur du texte au survol pour un contraste */
-    background-color: #fff; /* Change le fond du titre au survol */
-    border-radius: 5px; /* Bordure arrondie */
+    color: #e8bc4f;
+    background-color: #fff;
+    border-radius: 5px;
 }
 
-/* Style des éléments de la navbar (liens de menu) */
 .navbar-nav .nav-item .nav-link {
-    font-size: 1.2rem; /* Taille des liens */
-    color: white; /* Couleur des liens */
-    padding: 10px 15px; /* Espacement autour des éléments */
+    font-size: 1.2rem;
+    color: white;
+    padding: 10px 15px;
 }
 
-/* Changement de couleur au survol des éléments de menu */
 .navbar-nav .nav-item .nav-link:hover {
-    color: #e8bc4f; /* Couleur du texte au survol */
-    background-color: rgba(0, 0, 0, 0.2); /* Légère ombre de fond */
-    border-radius: 5px; /* Bordure arrondie */
+    color: #e8bc4f;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
 }
-
-
-
 
 
 .couleurTexteBandeau{
@@ -103,7 +96,7 @@ body,html{
     width: 100%;
     position: relative;
 }
-/* Pour la page d'accueil */
+
 .pageHome {
     display: flex;
     flex-direction: column;
@@ -126,21 +119,21 @@ body,html{
 
 
 .logo-with-text {
-    display: flex; /* Aligne les éléments horizontalement */
-    align-items: center; /* Centre verticalement le texte par rapport au logo */
-    gap: 10px; /* Espacement entre le logo et le texte */
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .logo {
-    width: 50px; /* Largeur du logo */
-    height: 50px; /* Hauteur du logo */
-    border-radius: 10px; /* Coins arrondis, si souhaité */
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
 }
 
 .logo-text {
-    font-size: 1.5rem; /* Taille du texte */
-    color: white; /* Couleur du texte */
-    font-weight: bold; /* Texte en gras */
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
 }
 
 .logo_jeu {
@@ -155,7 +148,7 @@ body,html{
 
 .paper-container {
     position: relative;
-    width: 80vw; /* largeur adaptative */
+    width: 80vw;
     max-width: 1000px;
     margin: auto;
 }
@@ -187,10 +180,6 @@ body,html{
     text-align: justify;
 }
 
-
-
-
-/* Si tu veux que le texte soit plus lisible contre l'arrière-plan */
 .paper p {
     padding: 10px;
     border-radius: 5px;
@@ -271,4 +260,72 @@ body,html{
 
 .carousel-button.next {
     right: 10px;
+}
+
+.section-separator {
+    height: 50px;
+    background: linear-gradient(to bottom, #ffeb98, #ddcb76);
+    border-top: 2px solid #ffeb98;
+    border-bottom: 2px solid #ddcb76;
+}
+
+
+body {
+    background-color: #e3d8c8;
+    font-family: 'Cinzel', serif;
+    color: #3b2a15;
+}
+
+.paragraphe-moyen-age {
+    background: linear-gradient(135deg, #f9f4e2 0%, #d8c9a2 100%);
+    border: 3px solid #6a4e2e;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 30px 0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.paragraphe-moyen-age::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    opacity: 0.15;
+    border-radius: 10px;
+    z-index: 0;
+}
+
+.paragraphe-moyen-age h2 {
+    font-size: 1.8em;
+    color: #6a4e2e;
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+/* Texte */
+.paragraphe-moyen-age p {
+    font-size: 1em;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .paragraphe-moyen-age {
+        padding: 20px;
+    }
+}
+@media (max-width: 480px) {
+    .paragraphe-moyen-age p {
+        font-size: 0.95em;
+    }
 }

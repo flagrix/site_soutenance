@@ -11,8 +11,8 @@
 
 <nav class="navbar navbar-expand-lg navColor">
     <div class="container-fluid">
-        <a class="navbar-brand fs-3 text-white home" href="#" id="home-button">
-            <img src="/image/logo_jeu.png" alt="Logo" class="logo_jeu"> Aedon's Stone</a>
+        <a class="navbar-brand fs-3 text-white home" href="#home" id="home-button">
+        <img src="/image/logo_jeu.png" alt="Logo" class="logo_jeu"> Aedon's Stone</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -20,7 +20,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item ">
-                    <a class="nav-link fs-5 text-white assets" href="#">Gameplay</a>
+                    <a class="nav-link fs-5 text-white assets" href="#gameplay">Gameplay</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link fs-5 text-white" href="#">Updates</a>
@@ -30,21 +30,17 @@
                 </li>
             </ul>
         </div>
-        <!-- fin de la création de la hotbar -->
     </div>
 </nav>
 
 
 
 <!-- création de la page d'accueil -->
-<!-- création de la page d'accueil -->
-<div class="pageHome justify-content-center">
+<div class="pageHome" id="home">
     <div class="titre-container">
         <img src="image/arriere_plan_titre.png" alt="Logo" class="titre-image">
         <p class="titre-content">Bienvenue sur Aedon's Stone</p>
     </div>
-
-        <!-- Paragraphe avec le GIF en arrière-plan -->
     <div class="paper-container">
         <img src="image/parchment.png" class="paper-image" alt="parchemin" />
         <div class="paper-content">
@@ -54,10 +50,19 @@
 
 </div>
 
-
+<div class="section-separator"></div>
 <!-- création de la page du gameplay -->
 
-<div class="pagegameplay">
+<div class="pagegameplay" id="gameplay">
+    <div class="paragraphe-moyen-age">
+        <h2>Chroniques de l'Ancien Royaume</h2>
+        <p>
+            En des temps oubliés, lorsque dragons et chevaliers arpentaient les cieux et les forêts,
+            le royaume d’Arkanis prospérait sous l’égide d’un roi juste. Mais nul ne pouvait prévoir
+            l’ombre grandissante à l’Est...
+        </p>
+    </div>
+
     <div class="carousel">
         <div class="carousel-track">
             <img src="image/baliste.png" class="carousel-slide" alt="image/404.jpeg">

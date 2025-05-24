@@ -1,24 +1,12 @@
-﻿// Sélection des éléments
-const assets = document.querySelector('.assets');
-const home = document.querySelector('.home');
-const pageAssets = document.querySelector('.pagegameplay');
-const pageHome = document.querySelector('.pageHome');
+﻿// Rien à cacher/afficher dynamiquement — tout reste visible en permanence
 
-// Vérification de l'existence des éléments
-if (assets && home && pageAssets && pageHome) {
-    assets.addEventListener('click', () => {
-        pageAssets.style.display = "flex";
-        pageHome.style.display = "none";
-        console.log("Page Features affichée, Home caché");
-    });
+// Scroll fluide vers les sections du site au clic sur la navbar
+document.querySelector('.assets')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelector('#gameplay')?.scrollIntoView({ behavior: 'smooth' });
+});
 
-    home.addEventListener('click', () => {
-        pageHome.style.display = "flex";
-        pageAssets.style.display = "none";
-        console.log("Page Home affichée, Features cachée");
-    });
-} else {
-    console.error("erreur");
-}
-
-
+document.querySelector('.home')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelector('#home')?.scrollIntoView({ behavior: 'smooth' });
+});

@@ -10,3 +10,11 @@ document.querySelector('.home')?.addEventListener('click', (e) => {
     e.preventDefault();
     document.querySelector('#home')?.scrollIntoView({ behavior: 'smooth' });
 });
+document.querySelector('.pageupdate')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelector('#update')?.scrollIntoView({ behavior: 'smooth' });
+});
+document.querySelector('.pageequipe')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelector('#equipe')?.scrollIntoView({ behavior: 'smooth' });
+});
